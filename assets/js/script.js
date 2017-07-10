@@ -1,20 +1,33 @@
+function squareImages() {
+	var image = $('#articles.section .item .image');
+	image.height(image.width());
+}
+
 $(document).ready(function(){
-	function squareImages() {
-		var image = $('#articles.section .item .image');
-		image.height(image.width());
-	}
+
 	squareImages();
 
-	$('a').click(function(){
-		$('#overlay').toggleClass('hidden-overlay');
+	var $overlay = $('#overlay');
+	var $body = $('body');
+	var $anchor = $('a');
+	var $close = $('.close');
+	var $container = $('.container');
+
+
+	$anchor.click(function(){
+		$overlay.toggleClass('active');
+		$body.toggleClass('active');
+		$container.hide();
 	});
 
-	$('.close').click(function(){
-		$('#overlay').toggleClass('hidden-overlay');
+	$close.click(function(){
+		$overlay.toggleClass('active');
+		$body.toggleClass('active');
+		$container.show();
 	});
 	
-$(window).resize(function(){
-	squareImages();
 });
 
+$(window).resize(function(){
+	squareImages();
 });
