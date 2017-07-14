@@ -65,7 +65,7 @@ body {
   margin: 0;
   background-color: #FF9901;
   animation-name: flash;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
 body.active {
