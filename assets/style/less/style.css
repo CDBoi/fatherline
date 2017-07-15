@@ -65,7 +65,7 @@ body {
   margin: 0;
   background-color: #FF9901;
   animation-name: flash;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
 body.active {
@@ -204,7 +204,7 @@ p {
   line-height: 12px;
 }
 #overlay.section.active {
-  display: flex!important;
+  display: flex;
 }
 header.section {
   padding: 20px 0 0 0;
@@ -394,6 +394,10 @@ header.section .item:last-child {
   display: none;
 }
 @media (max-width: 700px) {
+  #overlay.section.active {
+    display: block;
+    padding-top: 40px;
+  }
   html,
   body {
     height: auto;
